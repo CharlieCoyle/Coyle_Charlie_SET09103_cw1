@@ -1,3 +1,53 @@
-<!doctype  html >
-	<h1 >Hello {{ user.name  }}!</h1 >
-</html >
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body {
+background-color: #5b8fae
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1c283f;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #5B8FAE;
+}
+
+.active {
+    background-color: #b78882;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">CCGS?</a></li>
+  <li><a href="#contact">Search</a></li>
+  <li style="float:right"><a href="#about">About</a></li>
+</ul>
+<h1 style="text-align: center;">Wellcome to</h1>
+<h1 style="text-align: center;">CCG Index</h1>
+
+</body>
+
+</html>
