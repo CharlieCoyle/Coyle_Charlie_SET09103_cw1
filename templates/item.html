@@ -1,3 +1,4 @@
+
 <!doctype  html >
 <html>
 <head>
@@ -17,7 +18,6 @@ ul {
 li {
     float: left;
 }
-
 li a {
     display: block;
     color: white;
@@ -40,19 +40,52 @@ li a:hover:not(.active) {
   <li><a href="http://set09103.napier.ac.uk:9120/ccg_index">Home</a></li>
   <li><a class="active href="">CCGS?</a></li>
   <li><a href=search>Search</a></li>
-  <li style="float:right"><a href="#about">About</a></li>
+  <li style="float:right"> <a href="#about">About</a></li>
 </ul>
 </body>
 <!--############################# -->
 {% if ccg %}
 <body>
 <!--this is where page html goes  -->
-<h1 style="text-align: center;">What is</h1>
+<h1 style="text-align: center;">What is </h1>
+{% if ccg =="yu-gi-oh" %}
 <h1 style="text-align: center;">{{ccg}}?</h1>
-
+<ul><font color="white">
+  <h2>Basic Info</h2>
+  <p>2-player(advaced rule sets allow 2v2 and 2v1)- Age 6 - Publisher: Yu-Gi-Oh )</p>
+  <a href="https://www.wikihow.com/Play-Yu-Gi-Oh!">Rules<a>
+  <h2>Trivia</h2>
+  <p>Yu-Go-Oh is based on a Anime wich is Based on a Manga of the same names</p>
+  </font>
 </ul>
-
 </body>
+{% elif ccg =="magic_the_gathering" %}
+<h1 style="text-align: center;">Magic The Gathering?</h1>
+<ul><font color="white">
+  <h2>Basic info</h2>
+  <p>2-player(Two-Headed Giant rule set allows 2v2)- Age 13+ - Publisher: Wizards of the coast )</p>
+  <a href="https://magic.wizards.com/en/gameplay/how-to-play">Rules<a>
+  <h2>Trivia</h2>
+  <p>Magic The Gathering is both a trading card and digital collectible card game created by Richard Garfield. Released in 1993 by Wizards of the Coast, Magic was the first trading card game created and it continues to thrive, with approximately twenty million players as of 2015, and over twenty billion Magic cards produced in the period of 2008 to 2016 alone.</p>
+  </font>
+</ul>
+</body>
+{% elif ccg =="gwent"%}
+<h1 style="text-align: center;">Gwent?</h1>
+<ul><font color="white">
+  <h2>Basic info</h2>
+  <p>2-player - Age 16+ - Publisher: Cd Projekt Red  )</p>
+  <a href="http://gwent.wikia.com/wiki/Rules">Rules<a>
+  <h2>Trivia</h2>
+  <p>Gwent is based on a min game in the origonal witcher games but was later spun off into its own game and physical copies were produced </p>
+  </font>
+</ul>
+</body>
+{% else %}
+<h1>{ccg}?</h1>
+<h2>Sorry i don't know that one<h2>
+
+{% endif %}
 
 {% else %}
 <body>
@@ -71,6 +104,7 @@ li a:hover:not(.active) {
 </body>
 {%  endif %}
 </html >
+
 
 
 
