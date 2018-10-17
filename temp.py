@@ -1,3 +1,4 @@
+
 from  flask  import  Flask , render_template
 app = Flask(__name__)
 
@@ -7,17 +8,18 @@ app = Flask(__name__)
 def  namefun(name=None):
 	return  render_template('conditional.html', name=name)
 #Home Page
-@app.route('/ccg-collectable-card-games')
+@app.route('/ccg_index')
 def  HomepageSlected(name=None):
 	return  render_template('home.html')
 #Item Selected Page
-@app.route('/ccg-collectable-card-games/CCG')
-@app.route('/ccg-collectable-card-games/CCG/<ccg>')
-def  CCGSlected(name=None):
-	return  render_template('item.html', name=name)
+@app.route('/ccg_index/ccg')
+@app.route('/ccg_index/ccg/<ccg>')
+def  CCGSlected(ccg=None):
+def  Info(ccginfo=None):
+	return  render_template('item.html', ccg=ccg, coginfo)
 #Serch Selected Page
-@app.route('/ccg-collectable-card-games/Serch')
-@app.route('/ccg-collectable-card-games/Serch/<item>')
+@app.route('/ccg_index/search')
+@app.route('/ccg_index/serch/<item>')
 def  SearchSelected(name=None):
 	return  render_template('search.html', name=name)
 

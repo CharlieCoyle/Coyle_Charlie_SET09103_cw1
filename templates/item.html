@@ -1,0 +1,78 @@
+<!doctype  html >
+<html>
+<head>
+<style>
+body {
+background-color: #5b8fae
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1c283f;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #5B8FAE;
+}
+
+.active {
+    background-color: #b78882;
+}
+</style>
+</head>
+<body>
+<ul>
+  <li><a href="http://set09103.napier.ac.uk:9120/ccg_index">Home</a></li>
+  <li><a class="active href="">CCGS?</a></li>
+  <li><a href=search>Search</a></li>
+  <li style="float:right"><a href="#about">About</a></li>
+</ul>
+</body>
+<!--############################# -->
+{% if ccg %}
+<body>
+<!--this is where page html goes  -->
+<h1 style="text-align: center;">What is</h1>
+<h1 style="text-align: center;">{{ccg}}?</h1>
+
+</ul>
+
+</body>
+
+{% else %}
+<body>
+<!--this is where page html goes  -->
+<h1 style="text-align: center;">What is</h1>
+<h1 style="text-align: center;">A CCG?</h1>
+
+<ul><font color="white">
+  <h2>A CCG is a Collectable Card Game</h2>
+  <p>There are many CCGs out there from Magic the Gathering to Pokémon cards where the allure of collecting cards and duelling your friends/opponents. </p>
+  <h2>Types of CCGs </h2>
+  <p>There are different types of CCGs, some are 2 player others can have more, some involve monster summoning, some involve mana conservation. CCGs can range from complex(later rule sets for Yu-Gi-Oh) to very simple(collectable sports cards).</p>
+  </font>
+</ul>
+
+</body>
+{%  endif %}
+</html >
+
+
+
+
+
