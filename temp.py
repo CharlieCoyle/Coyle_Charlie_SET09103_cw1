@@ -15,8 +15,7 @@ def  HomepageSlected(name=None):
 @app.route('/ccg_index/ccg')
 @app.route('/ccg_index/ccg/<ccg>')
 def  CCGSlected(ccg=None):
-def  Info(ccginfo=None):
-	return  render_template('item.html', ccg=ccg, coginfo)
+	return  render_template('item.html', ccg=ccg)
 #Serch Selected Page
 @app.route('/ccg_index/search')
 @app.route('/ccg_index/serch/<item>')
