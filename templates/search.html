@@ -55,7 +55,7 @@ li a:hover:not(.active) {
 <h1 style="text-align: center;">Welcome to</h1>
 <h1 style="text-align: center;">CCG Index Search</h1>
 <div class="wrapper">
-<input style="float: center;" type="search" id="mySearch" placeholder="search for something">
+<input style="float: center;" type="search" id="mySearch" {% if ccg %} value= {{ccg}} {% else %} placeholder ="swarch for somthing"{%  endif %} > 
 <button style="float: center;" onclick= 'window.open(("http://set09103.napier.ac.uk:9120/ccg_index/ccg/" + document.getElementById("mySearch").value).replace(" ", "_").replace(" ", "_"))'>search</button>
 </div>
 </body>

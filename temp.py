@@ -8,13 +8,15 @@ def  HomepageSlected(name=None):
 	return  render_template('home.html')
 #Item Selected Page
 @app.route('/ccg_index/ccg')
+@app.route('/ccg_index/ccg/')
 @app.route('/ccg_index/ccg/<ccg>')
 def  CCGSlected(ccg=None):
 	return  render_template('item.html', ccg=ccg)
 #Serch Selected Page
 @app.route('/ccg_index/search')
-def  SearchSelected(name=None):
-	return  render_template('search.html')
+@app.route('/ccg_index/search/<ccg>')
+def  SearchSelected(ccg=None):
+	return  render_template('search.html', ccg=ccg)
 #about page
 @app.route('/ccg_index/about')
 def  AboutSelect(name=None):
