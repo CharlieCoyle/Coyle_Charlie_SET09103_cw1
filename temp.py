@@ -18,9 +18,8 @@ def  CCGSlected(ccg=None):
 	return  render_template('item.html', ccg=ccg)
 #Serch Selected Page
 @app.route('/ccg_index/search')
-@app.route('/ccg_index/serch/<item>')
 def  SearchSelected(name=None):
-	return  render_template('search.html', name=name)
+	return  render_template('search.html')
 
 if  __name__  == "__main__":
 	app.run(host='0.0.0.0', debug=True)

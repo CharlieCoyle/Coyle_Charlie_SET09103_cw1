@@ -39,7 +39,7 @@ li a:hover:not(.active) {
 <ul>
   <li><a href="http://set09103.napier.ac.uk:9120/ccg_index">Home</a></li>
   <li><a class="active href="">CCGS?</a></li>
-  <li><a href=search>Search</a></li>
+  <li><a href="http://set09103.napier.ac.uk:9120/ccg_index/search">Search</a></li>
   <li style="float:right"> <a href="#about">About</a></li>
 </ul>
 </body>
@@ -82,8 +82,8 @@ li a:hover:not(.active) {
 </ul>
 </body>
 {% else %}
-<h1>{ccg}?</h1>
-<h2>Sorry i don't know that one<h2>
+<h1 style="text-align: center;"> {{ccg}}?</h1>
+<h2 style="text-align: center;"> Sorry i don't know that one<h2>
 
 {% endif %}
 
