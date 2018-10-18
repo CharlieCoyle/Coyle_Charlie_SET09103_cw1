@@ -15,9 +15,14 @@ def  CCGSlected(ccg=None):
 @app.route('/ccg_index/search')
 def  SearchSelected(name=None):
 	return  render_template('search.html')
+#about page
+@app.route('/ccg_index/about')
+def  AboutSelect(name=None):
+	return render_template('ccginfo.html')
+
 #error out page
 @app.errorhandler(404)
-def page_not_Found(error):
+def  page_not_Found(error):
 	page ='''
 	<html><body>
 	 <h1 style ="text-align: center"> 404 You seem to have gotten lost</h1>
